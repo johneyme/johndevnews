@@ -1,0 +1,21 @@
+.topnews-images {
+  & img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+  & h2 {
+    text-align: left;
+  }
+  & p {
+    text-align: left;
+  }
+}
+.topnews-text {
+  & h2 {
+    font-size: xx-large;
+  }
+  & p {
+    font-size: large;
+  }
+}
