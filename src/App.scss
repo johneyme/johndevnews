@@ -2,7 +2,10 @@
 @import "./style/mixins.scss";
 
 .App {
-  margin: 1em;
+  margin: 0.5em;
+  padding: 2em;
+  border: 2px solid $color-dividing-line;
+  background-color: $light-background;
 
   @include for-size(phone-only) {
   }
