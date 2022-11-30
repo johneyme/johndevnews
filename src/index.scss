@@ -3,10 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Marck+Script&family=News+Cycle&display=swap");
 
 body {
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
   font-family: "News Cycle", sans-serif;
-  background-color: #151936;
+  background: rgb(11, 13, 28);
+  background: linear-gradient(
+    0deg,
+    rgb(47, 55, 119) 0%,
+    rgb(28, 33, 73) 52%,
+    rgba(21, 25, 54, 1) 100%
+  );
   margin: 0;
   font-family: -apple-system, "News Cycle", "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

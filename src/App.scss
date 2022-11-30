@@ -3,9 +3,10 @@
 
 .App {
   margin: 0.5em;
-  padding: 2em;
+  padding: 0 2em 2em 2em;
   border: 2px solid $color-dividing-line;
-  background-color: $light-background;
+  background-image: url("./assets/texture.png");
+  background-size: 15%;
 
   @include for-size(phone-only) {
   }

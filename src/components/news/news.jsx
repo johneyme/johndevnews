@@ -9,7 +9,7 @@ function News({
   date,
   author,
   tag,
-  isthreeQuarter,
+  isTwoThird,
 }) {
   if (isImageNews === true && isBigNews === false) {
     return (
@@ -29,7 +29,7 @@ function News({
   } else if (
     isImageNews === true &&
     isBigNews === true &&
-    isthreeQuarter === false
+    isTwoThird === false
   ) {
     return (
       <article className="news-big">
@@ -44,7 +44,7 @@ function News({
   } else if (
     isImageNews === true &&
     isBigNews === true &&
-    isthreeQuarter === true
+    isTwoThird === true
   ) {
     return (
       <article className="news-big">
