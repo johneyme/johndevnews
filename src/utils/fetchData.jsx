@@ -11,7 +11,7 @@ function fetchAll(setData) {
   // UserId search in Url bar
 
   // Fetch use to load data user
-  /* const loadApi = `https://newsapi.org/v2/everything?q=keyword&apiKey=c32de37ca8164431a596552bd09afce9`;
+  const loadApi = `https://newsapi.org/v2/top-headlines?country=fr&apiKey=c32de37ca8164431a596552bd09afce9`;
 
   const fetchData = async () => {
     const responseApi = await fetch(loadApi);
@@ -19,9 +19,7 @@ function fetchAll(setData) {
 
     setData(newDataApi);
   };
-  fetchData();*/
-
-  setData(dataNews);
+  fetchData();
 }
 
 export default fetchAll;

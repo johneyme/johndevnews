@@ -37,7 +37,7 @@ function News({
         <h2>{title}</h2>
         <img src={image} alt={title} />
         <p>{text}</p>
-        <h3>by {author}</h3>
+        {author && <h3>écrit par "{author}"</h3>}
         <h5>{date}</h5>
       </article>
     );
@@ -52,7 +52,7 @@ function News({
         <h4>{tag}</h4>
         <h2>{title}</h2>
         <p>{text}</p>
-        <h3>by {author}</h3>
+        {author && <h3>écrit par "{author}"</h3>}
         <h5>{date}</h5>
       </article>
     );

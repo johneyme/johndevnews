@@ -1,19 +1,21 @@
 import "./home.scss";
 import landscape from "../../assets/landscape.jpg";
 import News from "../../components/news/news";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import fetchAll from "../../utils/fetchData";
-import dataNews from "../../data/mockdata";
+import dataNewsNews from "../../data/mockdata";
 //import { HashLink as Link } from 'react-router-hash-link';
 
 function Home() {
-  //const [dataNews, setDataNews] = useState([]);
+  const [dataNews, setDataNews] = useState([]);
   const news = dataNews.articles;
-  console.log(news);
+  console.log(dataNews);
 
-  /* useEffect(() => {
+  useEffect(() => {
     fetchAll(setDataNews);
-  }, []);*/
+  }, []);
+
+  if (news === undefined) return <div>Chargement des actualités ...</div>;
 
   return (
     <main className="home">
