@@ -1,9 +1,8 @@
 import "./home.scss";
-import landscape from "../../assets/landscape.jpg";
 import News from "../../components/news/news";
 import React, { useState, useEffect } from "react";
 import fetchAll from "../../utils/fetchData";
-import dataNewsNews from "../../data/mockdata";
+// import dataNewsNews from "../../data/mockdata";
 //import { HashLink as Link } from 'react-router-hash-link';
 
 function Home() {
@@ -22,11 +21,12 @@ function Home() {
       <div className="onthetop">
         <div className="topnews topnews__first">
           <News
-            image={news[3].urlToImage}
-            title={news[3].title}
-            text={news[3].description}
+            image={news[0].urlToImage}
+            title={news[0].title}
+            text={news[0].description}
             isImageNews={true}
             isBigNews={false}
+            url={news[0].url}
           />
         </div>
 
@@ -37,6 +37,7 @@ function Home() {
             text={news[1].description}
             isImageNews={false}
             isBigNews={false}
+            url={news[1].url}
           />
         </div>
         <div className="topnews topnews__third">
@@ -46,11 +47,12 @@ function Home() {
             text={news[2].description}
             isImageNews={true}
             isBigNews={false}
+            url={news[2].url}
           />
         </div>
       </div>
       <div className="banner">
-        <img src={news[7].urlToImage} alt="test"></img>
+        <img src={news[3].urlToImage} alt={news[3].title}></img>
       </div>
       <div className="middlenews-homepage">
         <div className="bignews bignews-onethird">
@@ -64,24 +66,26 @@ function Home() {
             date={news[4].publishedAt}
             author={news[4].author}
             tag={news[4].source.name}
+            url={news[4].url}
           />
         </div>
         <div className="bignews bignews-twothird">
           <News
-            image={news[0].urlToImage}
-            title={news[0].title}
-            text={news[0].description}
+            image={news[5].urlToImage}
+            title={news[5].title}
+            text={news[5].description}
             isImageNews={true}
             isBigNews={true}
             isTwoThird={true}
-            ate={news[0].publishedAt}
-            author={news[0].author}
-            tag={news[0].source.name}
+            date={news[5].publishedAt}
+            author={news[5].author}
+            tag={news[5].source.name}
+            url={news[5].url}
           />
         </div>
       </div>
       <div className="banner">
-        <img src={news[1].urlToImage} alt="test"></img>
+        <img src={news[6].urlToImage} alt={news[6].title}></img>
       </div>
       <div className="endnews-homepage">
         <div className="bignews bignews-twothird">
@@ -92,22 +96,24 @@ function Home() {
             isImageNews={true}
             isBigNews={true}
             isTwoThird={true}
-            ate={news[7].publishedAt}
+            date={news[7].publishedAt}
             author={news[7].author}
             tag={news[7].source.name}
+            url={news[7].url}
           />
         </div>
         <div className="bignews bignews-onethird">
           <News
-            image={news[6].urlToImage}
-            title={news[6].title}
-            text={news[6].description}
+            image={news[8].urlToImage}
+            title={news[8].title}
+            text={news[8].description}
             isImageNews={true}
             isBigNews={true}
             isTwoThird={false}
-            date={news[6].publishedAt}
-            author={news[6].author}
-            tag={news[6].source.name}
+            date={news[8].publishedAt}
+            author={news[8].author}
+            tag={news[8].source.name}
+            url={news[8].url}
           />
         </div>
       </div>

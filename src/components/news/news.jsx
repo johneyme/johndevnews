@@ -1,4 +1,6 @@
 import "./news.scss";
+import newsImg from "../../assets/news.jpg";
+import rightArrow from "../../assets/right-arrow.png";
 
 function News({
   image,
@@ -10,20 +12,46 @@ function News({
   author,
   tag,
   isTwoThird,
+  url,
 }) {
+  if (image === null) {
+    image = newsImg;
+  }
+
+  const dateNews = new Date(date);
+  const formattedDate = dateNews.toLocaleDateString("fr-FR", {
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+  });
+
   if (isImageNews === true && isBigNews === false) {
     return (
-      <article className="news-images">
-        <img src={image} alt={title} />
+      <article className="news news-images">
+        <img className="image-news" src={image} alt={title} />
         <h2>{title}</h2>
         <p>{text}</p>
+        <a href={url}>
+          <img
+            className="fleche-savoir-plus"
+            src={rightArrow}
+            alt="Flèche en savoir plus"
+          ></img>
+        </a>
       </article>
     );
   } else if (isImageNews === false && isBigNews === false) {
     return (
-      <article className="news-text">
+      <article className="news news-text">
         <h2>{title}</h2>
         <p>{text}</p>
+        <a href={url}>
+          <img
+            className="fleche-savoir-plus"
+            src={rightArrow}
+            alt="Flèche en savoir plus"
+          ></img>
+        </a>
       </article>
     );
   } else if (
@@ -32,13 +60,20 @@ function News({
     isTwoThird === false
   ) {
     return (
-      <article className="news-big">
+      <article className="news news-big">
         <h4>{tag}</h4>
         <h2>{title}</h2>
-        <img src={image} alt={title} />
+        <img className="image-news" src={image} alt={title} />
         <p>{text}</p>
         {author && <h3>écrit par "{author}"</h3>}
-        <h5>{date}</h5>
+        <h5>{formattedDate}</h5>
+        <a href={url}>
+          <img
+            className="fleche-savoir-plus"
+            src={rightArrow}
+            alt="Flèche en savoir plus"
+          ></img>
+        </a>
       </article>
     );
   } else if (
@@ -47,13 +82,20 @@ function News({
     isTwoThird === true
   ) {
     return (
-      <article className="news-big">
-        <img src={image} alt={title} />
+      <article className="news news-big">
+        <img className="image-news" src={image} alt={title} />
         <h4>{tag}</h4>
         <h2>{title}</h2>
         <p>{text}</p>
         {author && <h3>écrit par "{author}"</h3>}
-        <h5>{date}</h5>
+        <h5>{formattedDate}</h5>
+        <a href={url}>
+          <img
+            className="fleche-savoir-plus"
+            src={rightArrow}
+            alt="Flèche en savoir plus"
+          ></img>
+        </a>
       </article>
     );
   }
